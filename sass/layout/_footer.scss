@@ -1,0 +1,95 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $background-color-footer;
+}
+
+.footer__container {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex(baseline, null);
+  }
+}
+
+.footer__wrapper {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    @include flex(baseline, null);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+  }
+}
+
+.address {
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.contacts__link {
+  font-style: normal;
+  @include font(400, 14px, 1.71, 0.03em);
+
+  transition: color $transition;
+
+  &--color {
+    color: $white-color;
+  }
+
+  &--alphaColor {
+    color: $list-address;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.join-up {
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+
+.join-up__title {
+  color: $white-color;
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,37 @@
+.activity {
+  padding-top: 0px;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+
+  &__list {
+    @include flex(center, null);
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    color: $white-color;
+    background-color: rgba(47, 48, 58, 0.8);
+    @include font(4null, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}
+
+.activity__item {
+  position: relative;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}

@@ -1,0 +1,91 @@
+.sign-up {
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__form {
+      @include flex(center, null);
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+}
+
+.sign-up__title {
+  color: $white-color;
+  font-family: inherit;
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.sign-up__input {
+  transition: border-color $transition;
+  width: 100%;
+  display: block;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  color: $white-color;
+  background-color: transparent;
+
+  margin-bottom: 20px;
+
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $list-address;
+    @include font(400, 16px, null, 0.03em);
+  }
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.sign-up__button {
+  width: 200px;
+  @include flex(center, null);
+
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+
+  &:hover {
+    background-color: $hover-btn;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

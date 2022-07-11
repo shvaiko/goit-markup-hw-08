@@ -1,0 +1,124 @@
+.button-toggle {
+  width: 40px;
+  height: 40px;
+  @include flex(center, center);
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &--position {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: $white-color;
+  }
+}
+
+.button-toggle__icon {
+  fill: #212121;
+
+  transition: fill $transition;
+
+  .button-toggle:hover &,
+  .button-toggle:focus & {
+    fill: $accent-color;
+  }
+}
+
+.mobile-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-top: 48px;
+  padding-right: 40px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $white-color;
+  z-index: 100;
+
+  transform: translateY(-100%);
+  transition: transform $transition;
+}
+
+.mobile-container.is-open {
+  transform: translateY(0);
+}
+
+.mobile-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-nav__link {
+  @include font(500, 40px, null, 0.02em);
+  color: $secondary-text-color;
+
+  transition: color $transition;
+
+  &--current {
+    color: $accent-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-contacts {
+  margin-bottom: 64px;
+
+  &__item:first-child {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-contacts {
+  &__mail {
+    @include font(500, 24px, 1.17, 0.02em);
+    color: $primary-text-color;
+  }
+  &__tel {
+    @include font(500, 34px, 1.18, 0.02em);
+    color: $accent-color;
+  }
+}
+
+.mobile-soc {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.mobile-soc__item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-right: 10px;
+
+  &:not(:last-child)::after {
+    content: '';
+    display: block;
+    height: 22px;
+    width: 1px;
+    background-color: $border-color;
+    margin-left: 10px;
+  }
+}
+
+.mobile-soc__link {
+  @include font(500, 18px, 1.22, 0.02em);
+  color: $accent-color;
+}

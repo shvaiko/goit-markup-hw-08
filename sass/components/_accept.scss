@@ -1,0 +1,46 @@
+.accept {
+  position: relative;
+  display: block;
+  @include font(400, 12px, 1.17, 0.03em);
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 14px, 1.71, 0.03em);
+  }
+
+  padding-left: 24px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 36px;
+  }
+
+  &__link {
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.accept__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  @media screen and (min-width: 1200px) {
+    left: 12px;
+  }
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid $secondary-text-color;
+  border-radius: 4px;
+
+  .accept__checkbox:checked + & {
+    background-color: $accent-color;
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
+}
