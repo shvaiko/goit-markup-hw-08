@@ -24,7 +24,7 @@ transform: translate(-50%, -50%); */
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(1.8) rotate(90deg);
+    transform: translate(-50%, -50%) scale(1.8) rotate(-50deg);
   }
 
   @media screen and (min-width: 450px) {
